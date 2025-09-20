@@ -1,11 +1,13 @@
-import { Navbar } from "@/components"
+import { Typography } from "@/components/ui"
 
 export default function Home() {
   return (
     <>
-      <header>
-        <Navbar />
-      </header>
+      <section className="container py-8 lg:py-16">
+        <Typography variant={"h1"} className="text-center">
+          Welcome to PeopleNTech!
+        </Typography>
+      </section>
     </>
   )
 }

@@ -1,6 +1,8 @@
-import localFont from "next/font/local";
-import type { Metadata } from "next";
-import "./globals.css";
+import { Footer, Navbar } from "@/components"
+import type { Metadata } from "next"
+import localFont from "next/font/local"
+
+import "./globals.css"
 
 const manrope = localFont({
   src: [
@@ -27,7 +29,7 @@ const manrope = localFont({
   ],
   variable: "--font-manrope",
   display: "swap",
-});
+})
 
 export const metadata: Metadata = {
   title:
@@ -74,12 +76,12 @@ export const metadata: Metadata = {
       "msvalidate.01": "00FFD5059D4CB414B6479EB5F38F56F4",
     },
   },
-};
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="en">
@@ -87,8 +89,10 @@ export default function RootLayout({
         className={`${manrope.variable} antialiased`}
         suppressHydrationWarning
       >
+        <Navbar />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
-  );
+  )
 }
