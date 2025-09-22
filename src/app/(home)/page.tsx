@@ -1,3 +1,5 @@
+import { LatsTalk } from "@/components"
+
 import { FeaturedClients } from "./components/featured-clients"
 import { Header } from "./components/header"
 import { OurExpertise } from "./components/our-expertise"
@@ -16,6 +18,7 @@ export default function Home() {
       <OurExpertise />
       <WorkFlow />
       <OurProducts />
+      <LatsTalk />
     </>
   )
 }
