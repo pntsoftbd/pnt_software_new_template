@@ -5,6 +5,7 @@ import { Header } from "./components/header"
 import { OurClientSays } from "./components/our-client-says"
 import { OurExpertise } from "./components/our-expertise"
 import { OurProducts } from "./components/our-products"
+import { ReviewUs } from "./components/review-us"
 import ServicesCards from "./components/services"
 import { SisterConcern } from "./components/sister-concern"
 import { WeDo } from "./components/we-do"
@@ -23,6 +24,7 @@ export default function Home() {
       <LatsTalk />
       <OurClientSays />
       <SisterConcern />
+      <ReviewUs />
     </>
   )
 }

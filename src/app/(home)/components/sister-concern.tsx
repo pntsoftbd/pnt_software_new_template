@@ -45,7 +45,7 @@ const sisterConcerns = [
 
 export const SisterConcern = () => {
   return (
-    <section className="bg-background py-20">
+    <section className="bg-muted py-20">
       <div className="container">
         <Typography variant="h2" className="mb-12 text-center">
           Sister Concern
