@@ -64,10 +64,10 @@ export const FeaturedClients = () => {
   }, [slider])
 
   return (
-    <section className="py-12">
+    <section className="bg-primary-50/40 py-12">
       <div className="container">
         <div className="mx-auto max-w-xl text-center">
-          <Typography variant="h3" className="text-primary mb-2 font-bold">
+          <Typography variant="h3" className="mb-2 font-bold">
             Featured Client
           </Typography>
           <Typography className="text-muted-foreground mb-6">
