@@ -2,6 +2,7 @@ import { LatsTalk } from "@/components"
 
 import { FeaturedClients } from "./components/featured-clients"
 import { Header } from "./components/header"
+import { OurClientSays } from "./components/our-client-says"
 import { OurExpertise } from "./components/our-expertise"
 import { OurProducts } from "./components/our-products"
 import ServicesCards from "./components/services"
@@ -19,6 +20,7 @@ export default function Home() {
       <WorkFlow />
       <OurProducts />
       <LatsTalk />
+      <OurClientSays />
     </>
   )
 }
