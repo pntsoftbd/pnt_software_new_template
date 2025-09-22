@@ -134,7 +134,7 @@ export const Footer = () => {
               title="Google Map"
               src="https://maps.google.com/maps?q=PeopleNTech&t=&z=15&ie=UTF8&iwloc=&output=embed"
               width="100%"
-              height="200"
+              height="160"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
@@ -143,7 +143,7 @@ export const Footer = () => {
         </div>
       </section>
 
-      <section className="container grid grid-cols-1 gap-8 py-8 md:grid-cols-2 lg:grid-cols-5">
+      <section className="container mt-6 grid grid-cols-1 gap-8 py-8 md:grid-cols-2 lg:grid-cols-5">
         {/* Bangladesh Office */}
         <div>
           <Typography
@@ -325,9 +325,11 @@ export const Footer = () => {
       </section>
 
       {/* Bottom Bar */}
-      <section className="border-primary-900 mt-10 border-t pt-6 text-center text-sm text-gray-400">
-        © 2014 - {new Date().getFullYear()} PeopleNTech. All rights reserved.
-        &nbsp; Terms & Conditions | Privacy Policy
+      <section className="border-primary-900 border-t pt-6 text-center">
+        <Typography className="container text-sm text-gray-400">
+          © 2014 - {new Date().getFullYear()} PeopleNTech. All rights reserved.
+          &nbsp; Terms & Conditions | Privacy Policy
+        </Typography>
       </section>
     </footer>
   )

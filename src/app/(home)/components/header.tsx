@@ -14,8 +14,12 @@ export const Header = () => {
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
+          className="order-2 lg:order-1"
         >
-          <Typography variant="h1" className="mb-4">
+          <Typography
+            variant="h1"
+            className="mb-4 leading-[1.2] sm:leading-[1.3] lg:leading-[1.4]"
+          >
             We <span className="text-secondary">Empower</span> <br />
             Your Business Through Our Services
           </Typography>
@@ -25,7 +29,7 @@ export const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <Typography className="mb-6">
+            <Typography variant={"p"} className="mb-6">
               PeopleNTech supports global businesses and startups to transform
               ideas into excellent digital products that drive results.
             </Typography>
@@ -41,7 +45,7 @@ export const Header = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="flex justify-center"
+          className="order-1 flex justify-center lg:order-2"
         >
           <Image
             src="/vecteezy_team-business-analytics-data-email_8258372-0.svg"

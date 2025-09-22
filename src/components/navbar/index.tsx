@@ -19,6 +19,7 @@ import {
   SheetTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui"
+import { cn } from "@/lib/utils"
 import { Menu } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
@@ -106,7 +107,7 @@ export function Navbar() {
                 ) : (
                   <NavigationMenuLink
                     asChild
-                    className={navigationMenuTriggerStyle()}
+                    className={cn(navigationMenuTriggerStyle(), "text-base")}
                   >
                     <Link href={item.href}>{item.title}</Link>
                   </NavigationMenuLink>
@@ -143,13 +144,15 @@ export function Navbar() {
             <SheetContent className="overflow-y-auto">
               <SheetHeader>
                 <SheetTitle>
-                  <a href="/" className="flex items-center gap-2">
-                    <img
+                  <Link href="/" className="flex items-center gap-2">
+                    <Image
                       src="/logo.png"
                       className="max-h-8 dark:invert"
                       alt="Logo"
+                      width={150}
+                      height={100}
                     />
-                  </a>
+                  </Link>
                 </SheetTitle>
               </SheetHeader>
               <div className="flex flex-col gap-6 p-4">

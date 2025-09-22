@@ -1,5 +1,6 @@
 export * from "./accordion"
 export * from "./button"
+export * from "./card"
 export * from "./navigation-menu"
 export * from "./typography"
 export * from "./sheet"

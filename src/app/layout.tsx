@@ -1,35 +1,8 @@
 import { Footer, Navbar } from "@/components"
 import type { Metadata } from "next"
-import localFont from "next/font/local"
 
+import "./fonts.css"
 import "./globals.css"
-
-const manrope = localFont({
-  src: [
-    {
-      path: "../../public/fonts/manrope.bold.woff",
-      weight: "700",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/manrope.semibold.woff",
-      weight: "600",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/manrope.regular.woff",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/manrope.thin.woff",
-      weight: "100",
-      style: "normal",
-    },
-  ],
-  variable: "--font-manrope",
-  display: "swap",
-})
 
 export const metadata: Metadata = {
   title:
@@ -85,10 +58,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${manrope.variable} antialiased`}
-        suppressHydrationWarning
-      >
+      <body className={`antialiased`} suppressHydrationWarning>
         <Navbar />
         <main>{children}</main>
         <Footer />
