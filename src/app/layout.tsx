@@ -1,4 +1,5 @@
 import { Footer, Navbar } from "@/components"
+import "keen-slider/keen-slider.min.css"
 import type { Metadata } from "next"
 
 import "./fonts.css"

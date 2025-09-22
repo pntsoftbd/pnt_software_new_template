@@ -1,6 +1,7 @@
 import { FeaturedClients } from "./components/featured-clients"
 import { Header } from "./components/header"
 import { OurExpertise } from "./components/our-expertise"
+import { OurProducts } from "./components/our-products"
 import ServicesCards from "./components/services"
 import { WeDo } from "./components/we-do"
 import { WorkFlow } from "./components/work-flow"
@@ -14,6 +15,7 @@ export default function Home() {
       <WeDo />
       <OurExpertise />
       <WorkFlow />
+      <OurProducts />
     </>
   )
 }
