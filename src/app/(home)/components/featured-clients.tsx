@@ -35,12 +35,12 @@ export const FeaturedClients = () => {
     loop: true,
     mode: "snap",
     slides: {
-      perView: 5,
+      perView: 6,
       spacing: 16,
     },
     breakpoints: {
       "(max-width: 1024px)": {
-        slides: { perView: 3, spacing: 12 },
+        slides: { perView: 4, spacing: 12 },
       },
       "(max-width: 640px)": {
         slides: { perView: 2, spacing: 8 },
@@ -64,7 +64,7 @@ export const FeaturedClients = () => {
   }, [slider])
 
   return (
-    <section className="bg-primary-50/40 py-8 lg:py-16">
+    <section className="bg-primary-50/40 py-16 lg:py-24">
       <div className="container">
         <div className="mx-auto max-w-xl text-center">
           <Typography variant="h2" className="mb-2 font-bold">

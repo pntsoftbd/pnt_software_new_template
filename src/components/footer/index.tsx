@@ -14,24 +14,24 @@ export const Footer = () => {
       <section className="container grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
         {/* Contact Form */}
         <div className="space-y-4 text-white">
-          <Image src="/logo.png" alt="Logo" width={200} height={50} />
-          <Typography variant="h5" className="font-semibold text-white">
+          <Typography variant="h5" className="text-white">
             WHY CHOOSE US <span className="text-secondary">?</span>
           </Typography>
-          <ul className="list-inside list-disc space-y-1 text-sm text-gray-300">
+          <ul className="list-inside list-disc space-y-1 text-gray-300">
             <li>Custom Software Development</li>
             <li>24/7 Client Support</li>
             <li>Fast Turnaround Time</li>
             <li>Certified Engineering Team</li>
           </ul>
+          <Image src="/logo.png" alt="Logo" width={200} height={50} />
         </div>
 
         {/* Other Services */}
         <div>
-          <Typography variant="h5" className="mb-4 font-semibold text-white">
+          <Typography variant="h5" className="mb-4 text-white">
             Other Services
           </Typography>
-          <ul className="space-y-1 text-sm text-gray-300">
+          <ul className="space-y-1 text-gray-300">
             <li>
               <Link href="/it-training" className="hover:text-white">
                 IT Training
@@ -72,7 +72,7 @@ export const Footer = () => {
 
         {/* Follow + Links */}
         <div>
-          <Typography variant="h5" className="mb-4 font-semibold text-white">
+          <Typography variant="h5" className="mb-4 text-white">
             Follow us
           </Typography>
           <div className="mb-4 flex space-x-2">
@@ -105,7 +105,7 @@ export const Footer = () => {
               <FaTwitter className="h-8 w-8 rounded-full bg-blue-600 p-2 text-white transition hover:bg-blue-700" />
             </Link>
           </div>
-          <ul className="space-y-1 text-sm text-gray-300">
+          <ul className="space-y-1 text-gray-300">
             <li>
               <Link href="/contact-us" className="hover:text-white">
                 Contact Us
@@ -148,7 +148,7 @@ export const Footer = () => {
         <div>
           <Typography
             variant="h5"
-            className="mb-4 text-base font-semibold text-white lg:text-sm"
+            className="mb-4 font-semibold text-white lg:text-sm"
           >
             Bangladesh Office
           </Typography>
@@ -183,7 +183,7 @@ export const Footer = () => {
         <div>
           <Typography
             variant="h5"
-            className="mb-4 text-base font-semibold text-white lg:text-sm"
+            className="mb-4 font-semibold text-white lg:text-sm"
           >
             Virginia Office
           </Typography>
@@ -219,7 +219,7 @@ export const Footer = () => {
         <div>
           <Typography
             variant="h5"
-            className="mb-4 text-base font-semibold text-white lg:text-sm"
+            className="mb-4 font-semibold text-white lg:text-sm"
           >
             New York Office
           </Typography>
@@ -255,7 +255,7 @@ export const Footer = () => {
         <div>
           <Typography
             variant="h5"
-            className="mb-4 text-base font-semibold text-white lg:text-sm"
+            className="mb-4 font-semibold text-white lg:text-sm"
           >
             New Jersey Office
           </Typography>
@@ -291,7 +291,7 @@ export const Footer = () => {
         <div>
           <Typography
             variant="h5"
-            className="mb-4 text-base font-semibold text-white lg:text-sm"
+            className="mb-4 font-semibold text-white lg:text-sm"
           >
             Pennsylvania (Upper Darby) Office
           </Typography>
@@ -326,7 +326,7 @@ export const Footer = () => {
 
       {/* Bottom Bar */}
       <section className="border-primary-900 border-t pt-6 text-center">
-        <Typography className="container text-sm text-gray-400">
+        <Typography as="p" className="container text-base text-gray-400">
           © 2014 - {new Date().getFullYear()} PeopleNTech. All rights reserved.
           &nbsp; Terms & Conditions | Privacy Policy
         </Typography>

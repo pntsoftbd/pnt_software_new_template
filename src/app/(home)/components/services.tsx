@@ -36,7 +36,7 @@ const services = [
 
 export default function ServicesCards() {
   return (
-    <section className="container grid grid-cols-1 gap-6 py-8 md:grid-cols-2 lg:grid-cols-3 lg:py-16">
+    <section className="container grid grid-cols-1 gap-6 py-16 md:grid-cols-2 lg:grid-cols-3 lg:py-24">
       {services.map((item, idx) => (
         <Card
           key={idx}
@@ -57,7 +57,9 @@ export default function ServicesCards() {
                   height={48}
                 />
               </div>
-              <Typography variant="h3">{item.title}</Typography>
+              <Typography variant="h3" className="mb-4">
+                {item.title}
+              </Typography>
             </CardHeader>
             <CardContent className="space-y-2">
               <ul className="text-muted-foreground list-inside list-disc space-y-2 text-left">

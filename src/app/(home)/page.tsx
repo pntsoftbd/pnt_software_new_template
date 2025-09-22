@@ -3,6 +3,7 @@ import { Header } from "./components/header"
 import { OurExpertise } from "./components/our-expertise"
 import ServicesCards from "./components/services"
 import { WeDo } from "./components/we-do"
+import { WorkFlow } from "./components/work-flow"
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <FeaturedClients />
       <WeDo />
       <OurExpertise />
+      <WorkFlow />
     </>
   )
 }

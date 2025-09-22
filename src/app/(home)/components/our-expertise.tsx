@@ -14,7 +14,7 @@ const techStack = [
 
 export const OurExpertise = () => {
   return (
-    <section className="bg-muted py-8 lg:py-16">
+    <section className="bg-muted py-16 lg:py-24">
       <div className="container">
         <Typography variant="h2" className="mb-12 text-center font-bold">
           Our Expertise

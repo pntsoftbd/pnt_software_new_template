@@ -7,7 +7,7 @@ import Link from "next/link"
 
 export const Header = () => {
   return (
-    <header className="bg-[url('/home-banner-bg.svg')] bg-cover bg-center bg-no-repeat py-8 lg:py-16">
+    <header className="bg-primary-50/40 bg-[url('/home-banner-bg.svg')] bg-cover bg-center bg-no-repeat py-16 lg:py-24">
       <section className="container grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
         {/* Left Content */}
         <motion.div
@@ -29,7 +29,7 @@ export const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <Typography variant={"p"} className="mb-6">
+            <Typography variant={"p"} className="mb-4">
               PeopleNTech supports global businesses and startups to transform
               ideas into excellent digital products that drive results.
             </Typography>
