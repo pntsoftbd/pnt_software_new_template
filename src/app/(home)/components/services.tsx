@@ -5,7 +5,8 @@ import Image from "next/image"
 const services = [
   {
     title: "Enterprise",
-    color: "border-b-blue-500",
+    color: "from-blue-100 via-blue-50 to-white",
+    border: "border-b-blue-500",
     icon: "/icons/enterprise.png",
     points: [
       "Managed IT Services",
@@ -15,7 +16,8 @@ const services = [
   },
   {
     title: "SMB",
-    color: "border-b-orange-400",
+    color: "from-orange-100 via-orange-50 to-white",
+    border: "border-b-orange-400",
     icon: "/icons/smb.png",
     points: [
       "IT Consulting",
@@ -25,7 +27,8 @@ const services = [
   },
   {
     title: "Startup",
-    color: "border-b-green-400",
+    color: "from-green-100 via-green-50 to-white",
+    border: "border-b-green-400",
     icon: "/icons/startup.png",
     points: ["Discovery phase", "MVP development", "CTO as a Service"],
   },
@@ -37,23 +40,35 @@ export default function ServicesCards() {
       {services.map((item, idx) => (
         <Card
           key={idx}
-          className={`rounded-xl text-center transition-shadow hover:shadow-lg ${item.color}`}
+          className={`group border-muted relative overflow-hidden rounded-xl border text-center transition-all hover:shadow-md ${item.border} `}
         >
-          <CardHeader className="flex flex-col items-center space-y-4">
-            <div className="bg-muted rounded-lg p-3">
-              <Image src={item.icon} alt={item.title} width={48} height={48} />
-            </div>
-            <Typography variant="h3">{item.title}</Typography>
-          </CardHeader>
-          <CardContent className="space-y-2">
-            <ul className="text-muted-foreground list-inside list-disc space-y-2 text-left">
-              {item.points.map((point, i) => (
-                <li key={i} className="pl-1 text-lg">
-                  {point}
-                </li>
-              ))}
-            </ul>
-          </CardContent>
+          {/* Gradient Overlay */}
+          <div
+            className={`pointer-events-none absolute inset-0 bg-gradient-to-br opacity-0 transition-opacity duration-300 group-hover:opacity-100 ${item.color}`}
+          />
+
+          <div className="relative z-10">
+            <CardHeader className="flex flex-col items-center space-y-4">
+              <div className="bg-muted rounded-lg p-3">
+                <Image
+                  src={item.icon}
+                  alt={item.title}
+                  width={48}
+                  height={48}
+                />
+              </div>
+              <Typography variant="h3">{item.title}</Typography>
+            </CardHeader>
+            <CardContent className="space-y-2">
+              <ul className="text-muted-foreground list-inside list-disc space-y-2 text-left">
+                {item.points.map((point, i) => (
+                  <li key={i} className="pl-1 text-base">
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
+          </div>
         </Card>
       ))}
     </section>

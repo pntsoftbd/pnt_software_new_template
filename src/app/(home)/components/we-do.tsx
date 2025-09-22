@@ -65,16 +65,16 @@ export const WeDo = () => {
   })
 
   return (
-    <section className="bg-primary-950 py-20 text-white">
+    <section className="bg-primary-900 py-8 text-white lg:py-16">
       <div className="container mb-12 text-center">
         <Typography
-          as="h2"
-          className="text-primary-50 text-3xl font-bold tracking-tight sm:text-4xl"
+          variant={"h2"}
+          className="text-primary-50 font-bold tracking-tight"
         >
           We Do <span className="text-secondary">{text}</span>
           <span className="animate-pulse text-white">|</span>
         </Typography>
-        <p className="text-primary-200 mx-auto mt-3 max-w-2xl text-base">
+        <p className="text-primary-100 mx-auto mt-3 max-w-2xl text-base">
           We build products that users love. Our services combine innovation,
           technology, and expertise to transform your business.
         </p>
