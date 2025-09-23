@@ -26,7 +26,7 @@ export const OurExpertise = () => {
               key={i}
               className="group flex flex-col items-center rounded-xl border border-gray-200 bg-white p-6 text-center shadow-sm transition-all hover:-translate-y-1 hover:shadow-md"
             >
-              <div className="relative mb-3 h-14 w-14">
+              <div className="relative mb-3 h-18 w-18">
                 <Image
                   src={tech.icon}
                   alt={tech.name}
@@ -34,7 +34,7 @@ export const OurExpertise = () => {
                   className="object-contain"
                 />
               </div>
-              <span className="group-hover:text-primary text-sm font-medium text-gray-600 transition">
+              <span className="group-hover:text-primary text-lg font-medium text-gray-600 transition">
                 {tech.name}
               </span>
             </div>

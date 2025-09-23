@@ -40,7 +40,7 @@ export const OurClientSays = () => {
   })
 
   return (
-    <section className="bg-background py-16 lg:py-24">
+    <section className="bg-background pb-16 lg:pb-24">
       <div className="container max-w-3xl">
         <Typography variant="h2" className="mb-12 text-center">
           What Our Clients Say

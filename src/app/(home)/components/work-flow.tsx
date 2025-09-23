@@ -131,7 +131,7 @@ export const WorkFlow = () => {
                 <div>
                   <Typography
                     variant="h5"
-                    className="text-primary mb-1 text-base font-semibold"
+                    className="mb-1 text-base font-semibold"
                   >
                     {step.title}
                   </Typography>

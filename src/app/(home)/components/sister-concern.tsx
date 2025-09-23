@@ -1,6 +1,7 @@
 "use client"
 
 import { Typography } from "@/components/ui/typography"
+import { motion } from "framer-motion"
 import Image from "next/image"
 
 const sisterConcerns = [
@@ -43,6 +44,17 @@ const sisterConcerns = [
   },
 ]
 
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      delay: i * 0.05,
+    },
+  }),
+}
 export const SisterConcern = () => {
   return (
     <section className="bg-muted py-20">
@@ -50,12 +62,16 @@ export const SisterConcern = () => {
         <Typography variant="h2" className="mb-12 text-center">
           Sister Concern
         </Typography>
-
-        <div className="grid grid-cols-2 items-center justify-center gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+        <div className="flex flex-wrap justify-center gap-6">
           {sisterConcerns.map((sister, index) => (
-            <div
+            <motion.div
               key={index}
-              className="group border-muted flex items-center justify-center rounded-xl border bg-white p-4 shadow-sm transition duration-300 hover:shadow-md"
+              className="group border-muted flex w-full items-center justify-center rounded-xl border bg-white p-4 shadow-sm transition hover:shadow-md sm:w-[calc(33%-1rem)] md:w-[calc(25%-1rem)] lg:w-[calc(16.66%-1rem)]"
+              variants={fadeInUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              custom={index}
             >
               <Image
                 src={sister.logo}
@@ -64,7 +80,7 @@ export const SisterConcern = () => {
                 height={80}
                 className="max-h-[60px] object-contain opacity-80 grayscale transition group-hover:opacity-100 group-hover:grayscale-0"
               />
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

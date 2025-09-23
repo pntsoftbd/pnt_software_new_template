@@ -34,6 +34,7 @@ export const contactFormSchema = z.object({
     .string()
     .min(5, "Message must be at least 5 characters")
     .max(1000, "Message must not exceed 1000 characters"),
+  attachment: z.any().optional(),
 })
 
 type ContactFormSchema = z.infer<typeof contactFormSchema>
@@ -133,19 +134,32 @@ export default function LetsTalkForm() {
           />
 
           {/* Custom Attachment */}
-          <div className="flex items-center gap-2 pt-1">
-            <Paperclip className="text-destructive h-4 w-4" />
-            <label className="cursor-pointer text-sm font-medium">
-              Attachment
-              <input type="file" hidden />
-            </label>
-          </div>
-
+          <FormField
+            control={form.control}
+            name="attachment"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="flex cursor-pointer items-center gap-2">
+                  <Paperclip className="text-destructive h-4 w-4" />
+                  Attachment
+                </FormLabel>
+                <FormControl>
+                  <Input
+                    hidden
+                    type="file"
+                    accept=".pdf,.doc,.docx,.jpg,.png"
+                    onChange={(e) => field.onChange(e.target.files?.[0])}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
           <Button type="submit" className="mt-2">
             Message
           </Button>
 
-          <p className="text-muted-foreground text-xs">
+          <p className="text-muted-foreground text-sm">
             By sending this, you are accepting our{" "}
             <Link
               href="/privacy-policy"

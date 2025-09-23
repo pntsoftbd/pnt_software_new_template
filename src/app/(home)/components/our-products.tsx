@@ -5,34 +5,48 @@ import { useKeenSlider } from "keen-slider/react"
 import Image from "next/image"
 import Link from "next/link"
 
+import { useEffect, useState } from "react"
+
 const products = [
   {
     title: "CRM Software",
     description:
       "We design custom CRM software for every king of business. Our design helps to maintain a high commercial relation ship with the client...",
     image: "/our-products/16568315486584CRM logo.png",
+    href: "/product-details/client-relationship-management-crm-software",
   },
   {
     title: "Inventory Management System",
     description:
       "It's really hard to track and keeping record of details of a warehouse. Our custom Inventory management software will vanish all unnecessary headache ",
     image: "/our-products/16568312994674Inventory System logo.png",
+    href: "/product-details/inventory-management-system",
   },
   {
     title: "School management software",
     description:
       "Our school management software is a powerful tool that is capable to manage all academic and official activity of an institute...",
     image: "/our-products/16568450817931School Management logo.png",
+    href: "/product-details/school-management-software",
   },
   {
     title: "Retail POS Software",
     description:
       "Our POS software is a complete retail solution for any kind of business. with this software user will get inventory, sales, CRM and other basic soluti",
     image: "/our-products/16568454467781Retail POS logo.png",
+    href: "/product-details/pos-software",
   },
 ]
 
 export const OurProducts = () => {
+  const [origin, setOrigin] = useState("")
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setOrigin(window.location.origin)
+    }
+  }, [])
+
   const [sliderRef] = useKeenSlider<HTMLDivElement>({
     loop: true,
     mode: "snap",
@@ -70,12 +84,12 @@ export const OurProducts = () => {
                     className="object-contain"
                   />
                 </div>
-                <Typography variant="h4">{product.title}</Typography>
+                <Typography variant="h3">{product.title}</Typography>
                 <Typography variant={"mutedText"}>
                   {product.description}
                 </Typography>
                 <Link
-                  href="#"
+                  href={`${origin}${product.href}`}
                   className="text-primary mt-auto inline-flex items-center gap-1 font-medium hover:underline"
                 >
                   Know More →

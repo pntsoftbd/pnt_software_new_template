@@ -11,7 +11,7 @@ export const LatsTalk = () => {
           {/* Left Side Form */}
           <LetsTalkForm />
           {/* Right Side Testimonial */}
-          <div className="relative flex flex-col justify-center bg-blue-100 p-8 sm:p-10">
+          <div className="relative flex flex-col justify-center bg-gradient-to-br from-blue-100 via-white to-blue-100 p-8 sm:p-10">
             <Typography variant="h3">Our Clients Say</Typography>
 
             <Typography variant={"mutedText"} className="my-4">
@@ -30,9 +30,9 @@ export const LatsTalk = () => {
                 />
                 Alex Levin
               </div>
-              <p className="text-muted-foreground mt-1 text-xs">
+              <Typography variant={"mutedText"} className="mt-1 text-xs">
                 Project Manager, Virgin Atlantic
-              </p>
+              </Typography>
             </div>
 
             {/* Quotation mark */}
